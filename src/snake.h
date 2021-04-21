@@ -3,14 +3,17 @@
 
 #include <vector>
 #include "SDL.h"
+#include "map.h"
+#include <iostream>
 
 class Snake {
  public:
   enum class Direction { kUp, kDown, kLeft, kRight };
 
-  Snake(int grid_width, int grid_height)
+  Snake(int grid_width, int grid_height, Map& map)
       : grid_width(grid_width),
         grid_height(grid_height),
+        map(map),
         head_x(grid_width / 2),
         head_y(grid_height / 2) {}
 
@@ -32,6 +35,7 @@ class Snake {
   void UpdateHead();
   void UpdateBody(SDL_Point &current_cell, SDL_Point &prev_cell);
 
+  Map& map;
   bool growing{false};
   int grid_width;
   int grid_height;

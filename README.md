@@ -1,12 +1,20 @@
 # CPPND: Capstone Snake Game Example
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+This repo contains the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses and was developed to satisfy criterias in sections in [Rubric](https://review.udacity.com/#!/rubrics/2533/view). The solution was built on the project skeleton provided by 
+Udacity.
 
 <img src="snake_game.gif"/>
 
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
+## Description
 
-In this project, you can build your own C++ application or extend this Snake game, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
+The game strats by asking for a username and then a play window will appears with the snake and food. Keyboard is used to move the snake toward food. The map will change acordelly to the progression of the user inside the game. The game will also store the score and username after the game is closed. Here is a list with the maps present into the game.
+
+| food range | map      |
+|------------|----------|
+| 0  - 9    | <img src="map0.png"/> |
+| 10 - 19    | <img src="map1.png"/> |
+| 20 - 29    | <img src="map2.png"/> |
+| 30 - inf   | <img src="map3.png"/> |
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
@@ -17,7 +25,7 @@ In this project, you can build your own C++ application or extend this Snake gam
   * Windows: [Click here for installation instructions](http://gnuwin32.sourceforge.net/packages/make.htm)
 * SDL2 >= 2.0
   * All installation instructions can be found [here](https://wiki.libsdl.org/Installation)
-  >Note that for Linux, an `apt` or `apt-get` installation is preferred to building from source. 
+  * Note that for Linux, an `apt` or `apt-get` installation is preferred to building from source.
 * gcc/g++ >= 5.4
   * Linux: gcc / g++ is installed by default on most Linux distros
   * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
@@ -30,17 +38,12 @@ In this project, you can build your own C++ application or extend this Snake gam
 3. Compile: `cmake .. && make`
 4. Run it: `./SnakeGame`.
 
+## Rubric
 
-## CC Attribution-ShareAlike 4.0 International
-
-
-Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
-
-This work is licensed under a
-[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
-
-[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
-
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+1. Loops, Functions --> The project code is OOP with the security mechanism in order to avoid fail states
+2. The project reads data from a file and process the data, or the program writes data to a file. --> Application read and write the file. (player.h)
+3. The project accepts user input and processes the input. -> user input in main.cpp
+4. The project uses Object Oriented Programming techniques. -> The project supports OOP
+5. Classes use appropriate access specifiers for class members. -> Members in player.h and map.h are explicitly specified as public, protected, or private.
+6. Class constructors utilize member initialization lists. -> Constructor of Map class
+7. Classes encapsulate behavior. -> Classes Map and Players
